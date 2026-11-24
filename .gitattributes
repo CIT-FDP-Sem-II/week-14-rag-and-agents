@@ -1,0 +1,8 @@
+# Default: treat files as text and normalise to LF in the repository.
+* text=auto
+
+# PDFs are binary and must be exempt. This line comes AFTER the wildcard
+# because in .gitattributes the LAST matching rule wins - with the order
+# reversed, "* text=auto" silently re-enables line-ending conversion and
+# Git on Windows corrupts every sample PDF on checkout.
+*.pdf binary
